@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Lista_Postaci xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <posiadane_postacie>
+    <Postac>
+      <id>0</id>
+      <doswiadczenie>0</doswiadczenie>
+      <poziom>0</poziom>
+      <zdrowie>1</zdrowie>
+      <maks_Zdrowie>1</maks_Zdrowie>
+      <sila>1</sila>
+      <wytrzymalosc>1</wytrzymalosc>
+      <zrecznosc>1</zrecznosc>
+      <pancerz>1</pancerz>
+      <szansa_Na_Cios_Krytyczny>0</szansa_Na_Cios_Krytyczny>
+      <aktualna_grupa>-1</aktualna_grupa>
+    </Postac>
+  </posiadane_postacie>
+</Lista_Postaci>

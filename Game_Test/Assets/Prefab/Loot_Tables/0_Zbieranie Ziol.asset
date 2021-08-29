@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37bd0d89e87fb684a81945d7364b02f1, type: 3}
+  m_Name: 0_Zbieranie Ziol
+  m_EditorClassIdentifier: 
+  id_tablicy: 0
+  gwarantowane_nagrod:
+  - przedmiot: {fileID: 11400000, guid: c455722cfe7c51e47b7387fffab24d7b, type: 2}
+    ilosc: 20
+  - przedmiot: {fileID: 11400000, guid: 2cdf4bfda92904f45a31d81b4ead6def, type: 2}
+    ilosc: 2
+  mozliwe_nagrody:
+  - przedmiot: {fileID: 11400000, guid: 2cdf4bfda92904f45a31d81b4ead6def, type: 2}
+    ilosc: 1
+  - przedmiot: {fileID: 11400000, guid: c455722cfe7c51e47b7387fffab24d7b, type: 2}
+    ilosc: 8
+  - przedmiot: {fileID: 11400000, guid: 5f7f0370ebf719d4580e2fa4692e6f2c, type: 2}
+    ilosc: 1
+  - przedmiot: {fileID: 11400000, guid: ffbede61ebb3d444386a3b60860996a7, type: 2}
+    ilosc: 1
+  szanse: 1e000000140000000a00000001000000
