@@ -3632,7 +3632,7 @@ MonoBehaviour:
   WND_Wyjscie: {fileID: 2132042057}
   postacie: {fileID: 1597719024}
   grupy: {fileID: 1597719029}
-  grupy_ui: {fileID: 0}
+  grupy_ui: {fileID: 1597719033}
   WND_LAST: {fileID: 205665798}
 --- !u!224 &781699382 stripped
 RectTransform:
