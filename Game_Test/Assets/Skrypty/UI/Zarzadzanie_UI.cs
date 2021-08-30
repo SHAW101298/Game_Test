@@ -2,10 +2,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Zarzadzanie_UI : MonoBehaviour 
 {
-	[Header("Referencje Okien")]
+	#region
+	public static Zarzadzanie_UI ins;
+	public void StworzReferencje()
+    {
+		ins = this;
+    }
+    #endregion
+
+    [Header("Referencje Okien")]
 	public GameObject WND_Main;
 	public GameObject WND_Postacie;
 	public GameObject WND_Grupy;
@@ -17,6 +26,8 @@ public class Zarzadzanie_UI : MonoBehaviour
 	public Zarzadzanie_Grupy grupy;
 
 	public Zarzadzanie_Grupy_UI grupy_ui;
+
+	public Text zloto;
 
 	[SerializeField]
 	GameObject WND_LAST;
@@ -68,11 +79,8 @@ public class Zarzadzanie_UI : MonoBehaviour
 		WND_LAST = WND_Wyjscie;
 	}
 
-
-	public static Zarzadzanie_UI ins;
-	public void StworzReferencje()
-	{
-		Debug.Log("Zarzadzanie UI | Tworzenie Referencji");
-		ins = this;
-	}
+	public void AktualizujZloto(int wartosc)
+    {
+		zloto.text = wartosc.ToString();
+    }
 }

@@ -34,5 +34,10 @@ public class Ekwipunek : MonoBehaviour
             ekwipunek.Add(nowy);
             zmieniona_zawartosc = true;
         }
+
+        if(przedmiot.przedmiot.id == 0)
+        {
+            Zarzadzanie_UI.ins.AktualizujZloto(ekwipunek[0].ilosc);
+        }
     }
 }
