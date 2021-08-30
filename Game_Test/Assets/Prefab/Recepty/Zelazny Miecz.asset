@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df7db1f2710d1341b599d9b0159cf6a, type: 3}
+  m_Name: Zelazny Miecz
+  m_EditorClassIdentifier: 
+  wymagane:
+  - przedmiot: {fileID: 11400000, guid: e61b7823e949fd0409598382819746b3, type: 2}
+    ilosc: 1
+  - przedmiot: {fileID: 11400000, guid: 111187c755d3e0747a4ec415a8ff5cbd, type: 2}
+    ilosc: 3
