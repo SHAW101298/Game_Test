@@ -17,6 +17,11 @@ public class Zarzadzanie_Przedmioty_UI : MonoBehaviour
     public GameObject materialy_content;
     public List<GameObject> materialy_obiekty;
 
+    public GameObject recepty_okno;
+    public GameObject recepty_content;
+    public List<GameObject> recepty_obiekty;
+    public Lista_Recept recepty_lista;
+
     [SerializeField]
     GameObject WND_LAST;
 
@@ -40,7 +45,6 @@ public class Zarzadzanie_Przedmioty_UI : MonoBehaviour
         WND_LAST = pancerze_okno;
         AktualizujPancerze();
     }
-    
     public void BTN_Materialy()
     {
         Debug.Log("BTN MATERIALY");
@@ -48,6 +52,11 @@ public class Zarzadzanie_Przedmioty_UI : MonoBehaviour
         materialy_okno.SetActive(true);
         WND_LAST = materialy_okno;
         AktualizujMaterialy();
+    }
+
+    public void BTN_Crafting()
+    {
+
     }
 
     public void AktualizujBronie()
