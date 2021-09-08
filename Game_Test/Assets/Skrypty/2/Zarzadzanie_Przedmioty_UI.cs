@@ -61,7 +61,7 @@ public class Zarzadzanie_Przedmioty_UI : MonoBehaviour
         WND_LAST.SetActive(false);
         crafting_okno.SetActive(true);
         WND_LAST = crafting_okno;
-
+        AktualizujCrafting();
     }
 
     public void AktualizujBronie()
@@ -132,6 +132,11 @@ public class Zarzadzanie_Przedmioty_UI : MonoBehaviour
     }
     public void AktualizujCrafting()
     {
+        Debug.Log("Crafting jest stały, nie ma co aktualizować");
+        // return;
+
+        UI_Akcje_Recepta temp;
+
         foreach (GameObject recepta in crafting_obiekty)
         {
             Destroy(recepta);
@@ -144,9 +149,10 @@ public class Zarzadzanie_Przedmioty_UI : MonoBehaviour
             dynamic_inst.transform.SetParent(crafting_content.transform);
             crafting_obiekty.Add(dynamic_inst);
 
-            dynamic_iko = dynamic_inst.GetComponent<Nagroda_Ikona>();
-            dynamic_iko.nazwa.text = recepta.nazwa;
-            dynamic_iko.ikona.sprite = Lista_Ikon.ins.ikony[recepta.rezultat.przedmiot.id_ikony];
+            temp = dynamic_inst.GetComponent<UI_Akcje_Recepta>();
+            temp.recepta = recepta;
+            temp.nazwa.text = recepta.nazwa;
+            temp.gameObject.GetComponent<Image>().sprite = Lista_Ikon.ins.ikony[recepta.rezultat.przedmiot.id_ikony];
         }
     }
 }

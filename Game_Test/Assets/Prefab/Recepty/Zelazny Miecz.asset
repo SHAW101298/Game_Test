@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2df7db1f2710d1341b599d9b0159cf6a, type: 3}
   m_Name: Zelazny Miecz
   m_EditorClassIdentifier: 
+  nazwa: 
+  id: 0
   wymagane:
   - przedmiot: {fileID: 11400000, guid: e61b7823e949fd0409598382819746b3, type: 2}
     ilosc: 1
   - przedmiot: {fileID: 11400000, guid: 111187c755d3e0747a4ec415a8ff5cbd, type: 2}
     ilosc: 3
+  rezultat:
+    przedmiot: {fileID: 11400000, guid: 082d9dc4a7d0008418337dc33051be6c, type: 2}
+    ilosc: 1
