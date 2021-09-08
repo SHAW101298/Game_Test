@@ -17,9 +17,9 @@ public class Zarzadzanie_Przedmioty_UI : MonoBehaviour
     public GameObject materialy_content;
     public List<GameObject> materialy_obiekty;
 
-    public GameObject recepty_okno;
-    public GameObject recepty_content;
-    public List<GameObject> recepty_obiekty;
+    public GameObject crafting_okno;
+    public GameObject crafting_content;
+    public List<GameObject> crafting_obiekty;
     public Lista_Recept recepty_lista;
 
     [SerializeField]
@@ -27,6 +27,7 @@ public class Zarzadzanie_Przedmioty_UI : MonoBehaviour
 
     GameObject dynamic_inst;
     public GameObject prefab_przedmiotu;
+    public GameObject prefab_recepty;
     Nagroda_Ikona dynamic_iko;
 
     public void BTN_Bronie()
@@ -56,6 +57,10 @@ public class Zarzadzanie_Przedmioty_UI : MonoBehaviour
 
     public void BTN_Crafting()
     {
+        Debug.Log("BTN CRAFTING");
+        WND_LAST.SetActive(false);
+        crafting_okno.SetActive(true);
+        WND_LAST = crafting_okno;
 
     }
 
@@ -123,6 +128,25 @@ public class Zarzadzanie_Przedmioty_UI : MonoBehaviour
                 dynamic_iko.nazwa.text = przedmiot.przedmiot.nazwa + " : " + przedmiot.ilosc;
                 dynamic_iko.ikona.sprite = Lista_Ikon.ins.ikony[przedmiot.przedmiot.id_ikony];
             }
+        }
+    }
+    public void AktualizujCrafting()
+    {
+        foreach (GameObject recepta in crafting_obiekty)
+        {
+            Destroy(recepta);
+        }
+        crafting_obiekty.Clear();
+
+        foreach (Recepta recepta in recepty_lista.lista)
+        {
+            dynamic_inst = Instantiate(prefab_recepty);
+            dynamic_inst.transform.SetParent(crafting_content.transform);
+            crafting_obiekty.Add(dynamic_inst);
+
+            dynamic_iko = dynamic_inst.GetComponent<Nagroda_Ikona>();
+            dynamic_iko.nazwa.text = recepta.nazwa;
+            dynamic_iko.ikona.sprite = Lista_Ikon.ins.ikony[recepta.rezultat.przedmiot.id_ikony];
         }
     }
 }
