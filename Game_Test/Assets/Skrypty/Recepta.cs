@@ -6,6 +6,7 @@ using UnityEngine;
 public class Recepta : ScriptableObject
 {
     public string nazwa;
+    public int id;
     public Przedmiot_w_Ekwipunku[] wymagane;
     public Przedmiot_w_Ekwipunku rezultat;
 }
